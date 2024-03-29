@@ -10,17 +10,17 @@ createApp({
     },
     methods:{
         nextCard(){
-            if(this.activeIndexSlide < this.slides.length){
+            if(this.activeIndexSlide < this.slides.length -1){
                 this.activeIndexSlide++;
             } else {
                 this.activeIndexSlide = 0;
             }
         },
         prevCard(){
-            if(this.activeIndexSlide > this.slides.length){
+            if(this.activeIndexSlide > 0){
                 this.activeIndexSlide--;
             }  else {
-                this.activeIndexSlide = -1;
+                this.activeIndexSlide = this.slides.length -1;
             }
         }
 
