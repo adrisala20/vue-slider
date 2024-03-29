@@ -5,6 +5,7 @@ createApp({
         return {
             slides: slides,
             activeIndexSlide: 0,
+            upHere:false,
         
         }
     },
@@ -22,7 +23,14 @@ createApp({
             }  else {
                 this.activeIndexSlide = this.slides.length -1;
             }
+        },
+        mouseOver(){
+             
         }
-
+        
+    },
+    mounted(){
+        setInterval(this.nextCard,2000)
+       this.nextCard()
     }
 }).mount('#app');
