@@ -12,11 +12,16 @@ createApp({
         nextCard(){
             if(this.activeIndexSlide < this.slides.length){
                 this.activeIndexSlide++;
+            } else {
+                this.activeIndexSlide = 0;
             }
-            
         },
         prevCard(){
-            this.activeIndexSlide--;
+            if(this.activeIndexSlide > this.slides.length){
+                this.activeIndexSlide--;
+            }  else {
+                this.activeIndexSlide = -1;
+            }
         }
 
     }
