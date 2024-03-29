@@ -10,7 +10,10 @@ createApp({
     },
     methods:{
         nextCard(){
-            this.activeIndexSlide++;
+            if(this.activeIndexSlide < this.slides.length){
+                this.activeIndexSlide++;
+            }
+            
         },
         prevCard(){
             this.activeIndexSlide--;
